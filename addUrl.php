@@ -9,9 +9,6 @@ if(beginsWith($newUrl,"http://") && endsWith($newUrl,'.jpg')){
     //insert url if sanitization test passes
     insertURL($newUrl);
 
-    //if sanitized then insert at end of urls.txt
-    file_put_contents("url.txt",$newUrl.PHP_EOL,FILE_APPEND);
-
     //Success! return to main page
     header('Location: ./index.php');
 } else {
