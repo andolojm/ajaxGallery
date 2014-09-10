@@ -60,8 +60,9 @@ SlideShow.prototype.getPrevImage = function () {
 //
 SlideShow.prototype.replaceImage = function (imgName) {
     currentImgName = imgName; //we need this for SlideShow.prototype.deleteImage, and this is a handy way to set it
+    //Alternatively just get $('theWallpaper').href;
 
-    var newImg = '<a href="' + imgName + '" title="Full Size Image"><img id="wallpaper" src="' + imgName + '" alt="Wallpaper" /></a>';
+    var newImg = '<a id ="theWallpaper" href="' + imgName + '" title="Full Size Image"><img id="wallpaper" src="' + imgName + '" alt="Wallpaper" /></a>';
     $('#pic').html(newImg);
 
 };
