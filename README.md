@@ -1,1 +1,3 @@
-Created 9/1/14 as a project for a capstone class. The assignment was to create a photo gallery using AJAX, reading, parsing, and refreshing server data.
+XSS Practice - Ajax Gallery
+================
+Warning: this application is insecure by design, to test cross-site scripting attacks.

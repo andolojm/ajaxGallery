@@ -13,14 +13,14 @@ echo $returnJSON;
 
 function getImages(&$array){
     //establish connection
-    $mysqli = new mysqli('localhost','root','rootsql','Gallery');
+    $mysqli = new mysqli('localhost','root','','gallery');
 
     //ensure connection
     if($mysqli->connect_errno){
         header('Location: ./error.php');
     } else {
         //if we're connected, prepare and execute the query
-        $query = $mysqli->prepare("SELECT url FROM Url");
+        $query = $mysqli->prepare("SELECT url FROM url");
 
         $query->execute();
 

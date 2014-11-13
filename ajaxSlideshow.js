@@ -1,16 +1,17 @@
-var serverUrl = "http://jeffandolora.com/CapstoneAJAXLab/getUrls.php";
-var deleteUrl = "http://jeffandolora.com/CapstoneAJAXLab/deleteUrl.php";
+var serverUrl = "getUrls.php";
+var deleteUrl = "deleteUrl.php";
 var ready = false; //changed by refreshImageListings success
-var currentImgName; //needed for SlideShow.prototype.deleteImage
 
 var slideshow = new SlideShow(); //init the photo gallery
 refreshImageListings(slideshow);
+document.cookie = "THIS IS A COOKIE. CONGRATS, YOU FOUND ME";
 
 //class constructor
 function SlideShow() {
     this.currentImg;
     this.maxImages;
     this.imageList;
+    this.currentImgName;
 }
 
 //called from button onClick
@@ -57,9 +58,8 @@ SlideShow.prototype.getPrevImage = function () {
 
 
 //replaces HTML in index.php
-//
 SlideShow.prototype.replaceImage = function (imgName) {
-    currentImgName = imgName; //we need this for SlideShow.prototype.deleteImage, and this is a handy way to set it
+    this.currentImgName = imgName; //we need this for SlideShow.prototype.deleteImage, and this is a handy way to set it
     //Alternatively just get $('theWallpaper').href;
 
     var newImg = '<a id ="theWallpaper" href="' + imgName + '" title="Full Size Image"><img id="wallpaper" src="' + imgName + '" alt="Wallpaper" /></a>';
@@ -109,7 +109,7 @@ SlideShow.prototype.deleteImage = function () {
         //send the request
         $.ajax({
             url: deleteUrl,
-            data: {url: currentImgName}, //tack a variable to the get request
+            data: {url: this.currentImgName}, //tack a variable to the get request
             success: function (xhr, status) { //runs on 200 status
 
                 //success returns "deleted"

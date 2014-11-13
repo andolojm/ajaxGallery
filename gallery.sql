@@ -35,7 +35,7 @@ CREATE TABLE `Url` (
 
 LOCK TABLES `Url` WRITE;
 /*!40000 ALTER TABLE `Url` DISABLE KEYS */;
-INSERT INTO `Url` VALUES (2,'http://jeffandolora.com/img/wp1.jpg'),(3,'http://jeffandolora.com/img/wp2.jpg'),(4,'http://jeffandolora.com/img/wp3.jpg'),(5,'http://jeffandolora.com/img/wp4.jpg'),(6,'http://jeffandolora.com/img/wp5.jpg'),(7,'http://jeffandolora.com/img/wp6.jpg'),(8,'http://jeffandolora.com/img/wp7.jpg'),(9,'http://jeffandolora.com/img/wp8.jpg'),(10,'http://jeffandolora.com/img/wp9.jpg'),(11,'http://jeffandolora.com/img/wp10.jpg'),(12,'http://jeffandolora.com/img/wp11.jpg'),(14,'http://jeffandolora.com/img/wp13.jpg');
+INSERT INTO `Url` VALUES (2,'http://i.imgur.com/BvV0fBj.jpg'),(3,'http://i.imgur.com/ISNAnKn.jpg'),(4,'http://i.imgur.com/Anr4uZb.jpg'),(5,'http://i.imgur.com/GjYDint.png'),(6,'http://i.imgur.com/LKL8fqx.jpg'),(7,'http://i.imgur.com/m2TVXkf.jpg'),(8,'http://i.imgur.com/hMnGXAW.jpg'),(9,'http://i.imgur.com/erI7QP4.jpg'),(10,'http://i.imgur.com/cgq1fMt.jpg'),(11,'http://i.imgur.com/cItC8sf.jpg'),(12,'http://i.imgur.com/d69jqhx.jpg'),(13,'http://i.imgur.com/i78PADo.jpg');
 /*!40000 ALTER TABLE `Url` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
